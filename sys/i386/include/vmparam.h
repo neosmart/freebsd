@@ -74,7 +74,7 @@
  * largest physical address that is accessible by ISA DMA is split
  * into two PHYSSEG entries. 
  */
-#define	VM_PHYSSEG_MAX		17
+#define	VM_PHYSSEG_MAX		31
 
 /*
  * Create two free page pools.  Since the i386 kernel virtual address
