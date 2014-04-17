@@ -1631,7 +1631,7 @@ vesa_mmap(video_adapter_t *adp, vm_ooffset_t offset, vm_paddr_t *paddr,
 	    (adp->va_info.vi_flags & V_INFO_LINEAR) != 0) {
 		/* va_window_size == va_buffer_size/vi_planes */
 		/* XXX: is this correct? */
-		if (offset > adp->va_window_size - PAGE_SIZE)
+		if (offset >= adp->va_info.vi_buffer_size)
 			return (-1);
 		*paddr = adp->va_info.vi_buffer + offset;
 		return (0);
